@@ -1,0 +1,107 @@
+﻿@{
+    ViewData["Title"] = "LandingPage";
+}
+<section id="form" class="form-section">
+    <div class="form-container">
+        <div class="form-imagem">
+            <div class="form-ajuste-img">
+                <div class="form-img-txt">
+                    <span>De um passo para a<br><span class="form-img-txt-big">LIBERDADE</span><br>Sua nova<br><span
+                            class="form-img-txt-big">CASA</span> o espera</span>
+                    <p>Cadastre-se para concorrer a isenção de entrada na sua nova casa ou apartamento.<br> Não perca a
+                        oportunidade!</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="form-layout">
+            <h3>Cadastre-se</h3>
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input name="nome" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input name="email" type="email">
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input name="telefone" type="tel">
+                </div>
+                <div class="form-group">
+                    <label for="idade">Data de nascimento</label>
+                    <input name="idade" type="date" max="2022-12-31">
+                </div>
+                <div class="form-estado-cidade">
+                    <div class="form-group">
+                        <label for="Estado">Estado</label>
+                        <select name="Estado" id="form-estado">
+                            <option value="select-one">UF</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Cidade">Cidade</label>
+                        <select name="renda" id="form-cidade">
+                            <option value="select-one">Selecione uma Cidade</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Bairro">Bairro</label>
+                    <input name="bairro" type="text" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="renda">Renda média</label>
+                    <select name="renda" id="form-renda">
+                        <option value="select-one">Selecione uma opção</option>
+                        <option value="1000-2000">R$ 1000 a 2000</option>
+                        <option value="2000-3000">R$ 2000 a 3000</option>
+                        <option value="3000-4000">R$ 3000 a 4000</option>
+                        <option value="maior-4000">Maior que R$ 4000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="renda">Possuí FGTS?</label>
+                    <select name="renda" id="form-fgts">
+                        <option value="select-one">Selecione uma opção</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="genero">Gênero</label>
+                    <select name="genero" id="form-genero">
+                        <option value="select-one">Selecione uma opção</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="estado-civil">Estado civil</label>
+                    <select name="estado-civil" id="form-estado-civil">
+                        <option value="select-one">Selecione uma opção</option>
+                        <option value="solteiro">Solteiro</option>
+                        <option value="casado">Casado</option>
+                        <option value="divorciado">Divorciado</option>
+                        <option value="viuvo">Viúvo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="filhos">Filhos</label>
+                    <select name="filhos" id="form-filhos">
+                        <option value="select-one">Selecione uma opção</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3-mais">3 ou mais</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="form-enviar">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
