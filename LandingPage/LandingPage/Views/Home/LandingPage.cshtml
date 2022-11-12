@@ -1,6 +1,9 @@
 ﻿@{
     ViewData["Title"] = "LandingPage";
 }
+
+@model Cliente
+
 <section id="form" class="form-section">
     <div class="form-container">
         <div class="form-imagem">
@@ -19,41 +22,41 @@
             <form action="" method="post">
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input name="nome" type="text">
+                    <input name="nome" type="text" asp-for="@Model.Nome">
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input name="email" type="email">
+                    <input name="email" type="email" asp-for="@Model.Email">
                 </div>
                 <div class="form-group">
                     <label for="telefone">Telefone</label>
-                    <input name="telefone" type="tel">
+                    <input name="telefone" type="tel" asp-for="@Model.Telefone">
                 </div>
                 <div class="form-group">
                     <label for="idade">Data de nascimento</label>
-                    <input name="idade" type="date" max="2022-12-31">
+                    <input name="idade" type="date" max="2022-12-31" asp-for="@Model.Nascimento">
                 </div>
                 <div class="form-estado-cidade">
                     <div class="form-group">
                         <label for="Estado">Estado</label>
-                        <select name="Estado" id="form-estado">
+                        <select name="Estado" id="form-estado" asp-for="@Model.Estado">
                             <option value="select-one">UF</option>
                         </select>
                     </div>
                     <div class="form-group cidade">
                         <label for="Cidade">Cidade</label>
-                        <select name="renda" id="form-cidade">
+                        <select name="renda" id="form-cidade" asp-for="@Model.Cidade">
                             <option value="select-one">Selecione uma Cidade   </option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="Bairro">Bairro</label>
-                    <input name="bairro" type="text" maxlength="50">
+                    <input name="bairro" type="text" maxlength="50" asp-for="@Model.Bairro">
                 </div>
                 <div class="form-group">
                     <label for="renda">Renda média</label>
-                    <select name="renda" id="form-renda">
+                    <select name="renda" id="form-renda" asp-for="@Model.Renda">
                         <option value="select-one">Selecione uma opção</option>
                         <option value="1000-2000">R$ 1000 a 2000</option>
                         <option value="2000-3000">R$ 2000 a 3000</option>
@@ -63,7 +66,7 @@
                 </div>
                 <div class="form-group">
                     <label for="renda">Possuí FGTS?</label>
-                    <select name="renda" id="form-fgts">
+                    <select name="renda" id="form-fgts" asp-for="@Model.FGTS">
                         <option value="select-one">Selecione uma opção</option>
                         <option value="sim">Sim</option>
                         <option value="nao">Não</option>
@@ -71,7 +74,7 @@
                 </div>
                 <div class="form-group">
                     <label for="genero">Gênero</label>
-                    <select name="genero" id="form-genero">
+                    <select name="genero" id="form-genero" asp-for="@Model.Genero">
                         <option value="select-one">Selecione uma opção</option>
                         <option value="feminino">Feminino</option>
                         <option value="masculino">Masculino</option>
@@ -80,7 +83,7 @@
                 </div>
                 <div class="form-group">
                     <label for="estado-civil">Estado civil</label>
-                    <select name="estado-civil" id="form-estado-civil">
+                    <select name="estado-civil" id="form-estado-civil" asp-for="@Model.EstadoCivil">
                         <option value="select-one">Selecione uma opção</option>
                         <option value="solteiro">Solteiro</option>
                         <option value="casado">Casado</option>
@@ -90,12 +93,12 @@
                 </div>
                 <div class="form-group">
                     <label for="filhos">Filhos</label>
-                    <select name="filhos" id="form-filhos">
+                    <select name="filhos" id="form-filhos" asp-for="@Model.Filhos">
                         <option value="select-one">Selecione uma opção</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3-mais">3 ou mais</option>
+                        <option value="0">Nenhum</option>
+                        <option value="1">Um</option>
+                        <option value="2">Dois</option>
+                        <option value="3-mais">Três ou mais</option>
                     </select>
                 </div>
                 <div class="form-group">
