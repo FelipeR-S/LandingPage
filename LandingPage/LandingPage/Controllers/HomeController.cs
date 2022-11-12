@@ -13,6 +13,11 @@ namespace LandingPage.Controllers
             _logger = logger;
         }
 
+        public IActionResult LandingPage()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
