@@ -12,6 +12,22 @@ namespace LandingPage.Models
 
     public class Cliente : BaseModel
     {
+        public Cliente(string nome, string email, string telefone, string estado, string cidade, string? bairro, DateTime? nascimento, string? renda, bool? fGTS, string? genero, string? estadoCivil, string? filhos)
+        {
+            Nome = nome;
+            Email = email;
+            Telefone = telefone;
+            Estado = estado;
+            Cidade = cidade;
+            Bairro = bairro;
+            Nascimento = nascimento;
+            Renda = renda;
+            FGTS = fGTS;
+            Genero = genero;
+            EstadoCivil = estadoCivil;
+            Filhos = filhos;
+        }
+
         [MinLength(5, ErrorMessage = "Nome deve ter no mínimo 5 caracteres")]
         [MaxLength(50, ErrorMessage = "Nome deve ter no máximo 50 caracteres")]
         [Required(ErrorMessage = "Nome é obrigatório")]
@@ -32,21 +48,5 @@ namespace LandingPage.Models
         public string? Genero { get; set; }
         public string? EstadoCivil { get; set; }
         public string? Filhos { get; set; }
-
-        internal void Update(Cliente novoCliente)
-        {
-            Nome = novoCliente.Nome;
-            Email = novoCliente.Email;
-            Telefone = novoCliente.Telefone;
-            Estado = novoCliente.Estado;
-            Cidade = novoCliente.Cidade;
-            Bairro = novoCliente.Bairro;
-            Nascimento = novoCliente.Nascimento;
-            Renda = novoCliente.Renda;
-            FGTS = novoCliente.FGTS;
-            Genero = novoCliente.Genero;
-            EstadoCivil = novoCliente.EstadoCivil;
-            Filhos = novoCliente.Filhos;
-        }
     }
 }
