@@ -11,7 +11,7 @@ let estadoId;
 
 /// Functions
 
-// Form Cadastro
+// Form Cadastro SELECT
 
 function CarregaEstados(){
     estadosJson.Estados.forEach((estado) => {
@@ -50,6 +50,8 @@ function RemoveCidades(){
         cidades.remove(i);
     }
 }
+
+/// ENVIO
 
 /// Call Functions
 
