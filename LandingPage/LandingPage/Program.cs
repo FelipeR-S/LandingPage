@@ -1,4 +1,5 @@
 using LandingPage.Data;
+using LandingPage.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IDataService, DataService>();
 builder.Services.AddTransient<ApplicationDbContext>();
+builder.Services.AddTransient<ICadastroRepository, CadastroRepository>();
 
 var app = builder.Build();
 
