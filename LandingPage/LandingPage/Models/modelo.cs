@@ -12,34 +12,15 @@ namespace LandingPage.Models
 
     public class Cliente : BaseModel
     {
-        public Cliente(string nome, string email, string telefone, string estado, string cidade, string? bairro, DateTime? nascimento, string? renda, bool? fGTS, string? genero, string? estadoCivil, string? filhos)
+        public Cliente()
         {
-            Nome = nome;
-            Email = email;
-            Telefone = telefone;
-            Estado = estado;
-            Cidade = cidade;
-            Bairro = bairro;
-            Nascimento = nascimento;
-            Renda = renda;
-            FGTS = fGTS;
-            Genero = genero;
-            EstadoCivil = estadoCivil;
-            Filhos = filhos;
         }
 
-        [MinLength(5, ErrorMessage = "Nome deve ter no mínimo 5 caracteres")]
-        [MaxLength(50, ErrorMessage = "Nome deve ter no máximo 50 caracteres")]
-        [Required(ErrorMessage = "Nome é obrigatório")]
         public string Nome { get; set; } = string.Empty;
-        [Required(ErrorMessage = "E-mail é obrigatório")]
         public string Email { get; set; } = string.Empty;
-        [Required(ErrorMessage = "Telefone é obrigatório")]
         [Key]
         public string Telefone { get; set; } = string.Empty;
-        [Required(ErrorMessage = "Um estado deve ser selecionado")]
         public string Estado { get; set; } = string.Empty;
-        [Required(ErrorMessage = "Uma cidade deve ser selecionada")]
         public string Cidade { get; set; } = string.Empty;
         public string? Bairro { get; set; }
         public DateTime? Nascimento { get; set; }
@@ -48,5 +29,7 @@ namespace LandingPage.Models
         public string? Genero { get; set; }
         public string? EstadoCivil { get; set; }
         public string? Filhos { get; set; }
+        public DateTime DataCadastro { get; private set; } = DateTime.Now;
+
     }
 }
