@@ -100,7 +100,6 @@ section {
 }
 
 .form-group select {
-  margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -135,6 +134,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-block: -.5rem;
   display: flex;
   justify-content: space-between;
+  font-size: .95rem;
+}
+.cidade{
+  width: 70%;
+}
+
+.form-group #form-cidade {
+  min-width: 100%; 
 }
 
 /* BTN FORM */
