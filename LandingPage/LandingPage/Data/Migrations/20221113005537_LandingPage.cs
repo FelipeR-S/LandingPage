@@ -14,7 +14,7 @@ namespace LandingPage.Data.Migrations
                 columns: table => new
                 {
                     Telefone = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Nome = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Estado = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cidade = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -25,6 +25,7 @@ namespace LandingPage.Data.Migrations
                     Genero = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EstadoCivil = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Filhos = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
