@@ -77,8 +77,31 @@ section {
   justify-content: center;
 }
 .form-group {
+  position: relative;
   margin-block: .5rem;
 }
+
+/* Icons */
+.form-group i{
+  position: absolute;
+  top: 2.2em;
+  right: 1.5em;
+}
+
+.form-group .fa-check{
+  color: limegreen;
+  display: none;
+}
+.form-group .fa-xmark{
+  color: red;
+  display: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+  margin-top: -.2em;
+  opacity: 100;
+}
+
 /* INPUT e SELECT FORM */
 
 .form-group input,
@@ -142,6 +165,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .form-group #form-cidade {
   min-width: 100%; 
+}
+
+select:-webkit-autofill,
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px #504A71 inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: white;
 }
 
 /* BTN FORM */
