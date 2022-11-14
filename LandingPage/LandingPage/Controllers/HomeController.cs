@@ -9,6 +9,7 @@ namespace LandingPage.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ICadastroRepository _cadastroRepository;
+        private static string _resposta = string.Empty;
 
         public HomeController(ILogger<HomeController> logger, ICadastroRepository cadastroRepository)
         {
@@ -18,6 +19,7 @@ namespace LandingPage.Controllers
 
         public IActionResult LandingPage()
         {
+			ViewData["Resposta"] = _resposta;
             return View();
         }
 
@@ -39,9 +41,15 @@ namespace LandingPage.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<string> CadastraCliente(Cliente cliente)
-        {           
-            return await _cadastroRepository.CadastraCliente(cliente); 
+        public async Task<IActionResult> CadastraCliente(Cliente cliente)
+        {
+            if (ModelState.IsValid)
+            {
+                _resposta = await _cadastroRepository.CadastraCliente(cliente);
+                return RedirectToAction("LandingPage");
+            }
+            _resposta = "Informações incorretas no cadastro.\n Favor verificar!";
+            return RedirectToAction("LandingPage");
         }
     }
 }
