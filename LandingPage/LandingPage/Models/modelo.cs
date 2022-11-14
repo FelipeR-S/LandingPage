@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
 namespace LandingPage.Models
@@ -19,8 +22,8 @@ namespace LandingPage.Models
         public string Email { get; set; } = string.Empty;
         [Key]
         public string Telefone { get; set; } = string.Empty;
-        public string Estado { get; set; } = string.Empty;
-        public string Cidade { get; set; } = string.Empty;
+        public string? Estado { get; set; }
+        public string? Cidade { get; set; }
         public string? Bairro { get; set; }
         public DateTime? Nascimento { get; set; }
         public string? Renda { get; set; }

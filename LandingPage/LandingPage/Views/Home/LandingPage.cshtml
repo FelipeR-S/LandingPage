@@ -1,7 +1,9 @@
 ﻿@{
     ViewData["Title"] = "LandingPage";
 }
-
+@{
+    var mensagem = ViewData["resposta"];
+}
 @model Cliente
 
 <section id="form" class="form-section">
@@ -9,10 +11,14 @@
         <div class="form-imagem">
             <div class="form-ajuste-img">
                 <div class="form-img-txt">
-                    <span>De um passo para a<br><span class="form-img-txt-big">LIBERDADE</span><br>Sua nova<br><span
-                            class="form-img-txt-big">CASA</span> o espera</span>
-                    <p>Cadastre-se para concorrer a isenção de entrada na sua nova casa ou apartamento.<br> Não perca a
-                        oportunidade!</p>
+                    <span>
+                        De um passo para a<br><span class="form-img-txt-big">LIBERDADE</span><br>Sua nova<br><span
+                            class="form-img-txt-big">CASA</span> o espera
+                    </span>
+                    <p>
+                        Cadastre-se para concorrer a isenção de entrada na sua nova casa ou apartamento.<br> Não perca a
+                        oportunidade!
+                    </p>
                 </div>
             </div>
         </div>
@@ -39,8 +45,8 @@
                     <i class="fa-solid fa-xmark"></i>
                 </div>
                 <div class="form-group">
-                    <label for="idade">Data de nascimento</label>
-                    <input name="idade" type="date" max="2022-12-31" asp-for="@Model.Nascimento" />
+                    <label for="nascimento">Data de nascimento</label>
+                    <input name="nascimento" value="@this.ToString()" asp-for="@Model.Nascimento" type="date" />
                 </div>
                 <div class="form-estado-cidade">
                     <div class="form-group">
@@ -54,9 +60,6 @@
                         <input list="form-cidade" asp-for="@Model.Cidade" name="cidade">
                         <datalist id="form-cidade">
                         </datalist>
-                        <!--<select name="cidade" id="form-cidade" asp-for="Model.Cidade">
-                            <option value="select-one">Selecione uma Cidade </option>
-                        </select>-->
                     </div>
                 </div>
                 <div class="form-group">
@@ -69,9 +72,9 @@
                     <label for="renda">Renda média</label>
                     <select name="renda" id="form-renda" asp-for="@Model.Renda">
                         <option value="select-one">Selecione uma opção</option>
-                        <option>R$ 1000 a 2000</option>
-                        <option>R$ 2000 a 3000</option>
-                        <option>R$ 3000 a 4000</option>
+                        <option>R$ 1000 a R$ 2000</option>
+                        <option>R$ 2000 a R$ 3000</option>
+                        <option>R$ 3000 a R$ 4000</option>
                         <option>Maior que R$ 4000</option>
                     </select>
                 </div>
@@ -79,8 +82,8 @@
                     <label for="fgts">Possuí FGTS?</label>
                     <select name="fgts" id="form-fgts" asp-for="@Model.FGTS">
                         <option value="select-one">Selecione uma opção</option>
-                        <option value="1">Sim</option>
-                        <option value="0">Não</option>
+                        <option value="true">Sim</option>
+                        <option value="false">Não</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -93,8 +96,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="estado-civil">Estado civil</label>
-                    <select name="estado-civil" id="form-estado-civil" asp-for="@Model.EstadoCivil">
+                    <label for="estadocivil">Estado civil</label>
+                    <select name="estadocivil" id="form-estado-civil" asp-for="@Model.EstadoCivil">
                         <option value="select-one">Selecione uma opção</option>
                         <option>Solteiro</option>
                         <option>Casado</option>
@@ -117,5 +120,9 @@
                 </div>
             </form>
         </div>
+        <dialog>
+            <p class="dialogtxt">@mensagem</p>
+            <button class="dialogbtn">Fechar</button>
+        </dialog>
     </div>
 </section>

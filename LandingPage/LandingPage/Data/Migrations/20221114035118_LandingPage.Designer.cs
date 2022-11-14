@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LandingPage.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221113005537_LandingPage")]
+    [Migration("20221114035118_LandingPage")]
     partial class LandingPage
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,7 +33,6 @@ namespace LandingPage.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Cidade")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DataCadastro")
@@ -44,7 +43,6 @@ namespace LandingPage.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Estado")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EstadoCivil")
