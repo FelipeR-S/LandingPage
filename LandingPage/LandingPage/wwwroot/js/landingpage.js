@@ -12,7 +12,7 @@ const inputNome = document.querySelector("[name='nome']");
 const inputTelefone = document.querySelector("[name='telefone']");
 const inputBairro = document.querySelector("[name='bairro']");
 const inputEmail = document.querySelector("[name='email']");
-const inputIdade = document.querySelector("[name='idade']");
+const inputIdade = document.querySelector("[name='nascimento']");
 
 const estados = document.querySelector('#form-estado');
 const cidades = document.querySelector('#form-cidade');
@@ -233,11 +233,10 @@ CidadeSelected();
 
 // Verifica btn enviar
 btnEnviar.addEventListener('click', (e) =>{
+    IsDefault();
     if(inputBairro.style.borderColor == "red"){
         inputBairro.value = "";
     }
-    IsDefault();
-    setTimeout(preventDefault(), .5)
 });
 
 // verifica todos os select que foram selecionados

@@ -31,7 +31,6 @@ namespace LandingPage.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Cidade")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DataCadastro")
@@ -42,7 +41,6 @@ namespace LandingPage.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Estado")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EstadoCivil")
