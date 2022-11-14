@@ -19,6 +19,11 @@ const cidades = document.querySelector('#form-cidade');
 const btnEnviar = document.querySelector('.form-enviar');
 let estadoId;
 
+// Dialog
+const dialog = document.querySelector('dialog');
+const dialogTxt = document.querySelector('.dialogtxt');
+const dialogBtn = document.querySelector('.dialogbtn');
+
 /// Functions
 
 // Input pattern
@@ -215,7 +220,15 @@ function IsDefault(){
     });
 }
 
-/// ENVIO
+/// DIALOG
+
+function OpenModal(){
+    dialog.showModal();
+}
+
+dialogBtn.addEventListener('click', (e) =>{
+    dialog.close();
+});
 
 /// Call Functions
 
@@ -241,3 +254,10 @@ btnEnviar.addEventListener('click', (e) =>{
 
 // verifica todos os select que foram selecionados
 document.addEventListener('change', SelectChange, false);
+
+// Ação ao carregar a página
+window.addEventListener('load', (event) => {
+   if(dialogTxt.textContent != null && dialogTxt.textContent != ""){
+       OpenModal();
+   }
+});
