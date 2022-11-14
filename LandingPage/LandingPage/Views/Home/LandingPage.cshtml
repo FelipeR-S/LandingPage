@@ -1,7 +1,9 @@
 ﻿@{
     ViewData["Title"] = "LandingPage";
 }
-
+@{
+    var mensagem = ViewData["resposta"];
+}
 @model Cliente
 
 <section id="form" class="form-section">
@@ -118,5 +120,9 @@
                 </div>
             </form>
         </div>
+        <dialog>
+            <p class="dialogtxt">@mensagem</p>
+            <button class="dialogbtn">Fechar</button>
+        </dialog>
     </div>
 </section>
