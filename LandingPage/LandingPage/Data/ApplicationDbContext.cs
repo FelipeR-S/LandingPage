@@ -1,6 +1,7 @@
 ﻿using LandingPage.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LandingPage.Data
 {
@@ -17,6 +18,8 @@ namespace LandingPage.Data
 
             builder.Entity<Cliente>().HasIndex(e => e.Email).IsUnique();
         }
-
     }
+
+
+
 }
