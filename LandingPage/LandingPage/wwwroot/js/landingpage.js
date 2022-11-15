@@ -5,6 +5,8 @@ import estadosJson from './estados.json' assert {type: 'json'}
 import cidadesJson from './cidades.json' assert {type: 'json'}
 
 /// Static Variables
+// Propaganda
+const faixas = document.querySelectorAll('.propaganda-fx');
 
 // Form Cadastro
 const AllSelect = document.querySelectorAll('select');
@@ -26,8 +28,15 @@ const dialogBtn = document.querySelector('.dialogbtn');
 
 /// Functions
 
-// Input pattern
+//// SECTION PROPAGANDA /////
+function AnimaFaixa(){
+    for (var i = 0; i < faixas.length; i++){
+        faixas[i].style.setProperty('transform', 'scaleX(1)');
+    }
+}
 
+//// SECTION FORM /////
+// Input pattern
 /// Contato ///
 // verifica se o evento keypress está de acordo com o permitido
 //Aceita apenas numeros
@@ -257,6 +266,7 @@ document.addEventListener('change', SelectChange, false);
 
 // Ação ao carregar a página
 window.addEventListener('load', (event) => {
+    AnimaFaixa();
    if(dialogTxt.textContent != null && dialogTxt.textContent != ""){
        OpenModal();
    }

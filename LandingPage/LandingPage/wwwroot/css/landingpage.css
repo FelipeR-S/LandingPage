@@ -10,27 +10,88 @@ section {
 #logo {
   margin: 0;
   padding: 0;
+  height: 10vh;
 }
 
 .logo-layout {
   display: flex;
   width: 100%;
+  height: 100%;
   background-color: var(--cor-purple);
-  justify-content: center;
+  align-items: center;
 }
-.logo-layout img {
-  width: 70%;
-  padding: 0.5rem;
+.logo-img {
+  text-align: center;
+  width: 100%;
+  height: 80%;
+  background-image: url(../img/landingpage/logo_white.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 /* FIM SECTION LOGO */
 
 /* SECTION PROPAGANDA */
+.propaganda-conteudo{
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-image: url(../img/landingpage/blue-sky.jpg);
+  background-position: bottom;
+}
 
+.propaganda-txt{
+  padding-top: 20%;
+  padding-right: 5%;
+  text-align: right;
+  z-index: 1;
+}
+.propaganda-txt-big{
+  font-size: 2em;
+  line-height: 1.2em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--cor-purple);
+}
 
+.propaganda-img{
+  position: absolute;
+  bottom: 0;
+  background-image: url(../img/landingpage/building1.png);
+  background-size: 100%;
+  height: 60%;
+  width: 80%;
+  left: calc(50% - 40%);
+  background-repeat: no-repeat;
+}
+
+/* detalhes propaganda */
+.propaganda-fx{
+  margin-top: calc(5.2em + 20%);
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  transition: all 1s ease-in;
+}
+
+.fx1{
+  height: 4em;
+  background: var(--cor-purple);
+  transform-origin: right;
+}
+
+.fx2{
+  height: 1em;
+  background: var(--cor-orange);
+  transform-origin: left;
+  transition-delay: .5s;
+  margin-top: calc(10em + 20%);
+
+}
 /* SECTION PROPAGANDA */
-
-
-
 
 /* SECTION FORMULARIO */
 .form-container {
@@ -40,7 +101,7 @@ section {
 /* Imagem Form */
 .form-imagem {
   width: 100%;
-  background-image: url("../img/landingpage/happy-couple.png");
+  background-image: url(../img/landingpage/happy-couple.png);
   background-size: cover;
   background-position: 58% 0%;
   background-repeat: no-repeat;
@@ -158,7 +219,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-  background: url("../img/landingpage/calendario-ico.svg");
+  background: url(../img/landingpage/calendario-ico.svg);
   background-size: 100%;
   cursor: pointer;
 }
@@ -284,11 +345,36 @@ dialog::backdrop {
 /* 720px W */
 @media (min-width: 720px) {
   /* LAYOUT TOP LOGO */
-  .logo-layout img {
-    width: 30%;
-    margin-top: 0.5rem;
-  }
   /* FIM LAYOUT TOP LOGO */
+
+  /* SECTION PROPAGANDA */
+  .propaganda-conteudo{
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    height: 100%;
+  }
+
+  .propaganda-img{
+    left: 5%;
+    width: 40%;
+    height: 90%;
+  }
+
+  .propaganda-txt{
+    margin-bottom: 20%;
+  }
+  /* FIM SECTION PROPAGANDA */
+
+  /* SECTION FORMULARIO */
+.form-imagem {
+  height: 100%;
+  background-position: 58% 100%;
+}
+
+.form-img-txt {
+  margin-bottom: 50%;
+}
+  /* FIM SECTION FORMULARIO */
 }
 /* 1200px W */
 
@@ -299,10 +385,39 @@ dialog::backdrop {
     width: 15%;
   }
   /* FIM LAYOUT TOP LOGO */
+  .propaganda-conteudo{
+    height: 90vh;
+  }
+  
+  .propaganda-txt{
+    padding-top: 10%;
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .propaganda-txt-big{
+    font-size: 2.5em;
+    line-height: 1em;
+  }
+  .propaganda-fx{
+    margin-top: calc(8.2em + 10%);
+  }
+
+  .fx1{
+    height: 5em;
+  }
+  
+  .fx2{
+    margin-top: calc(14em + 10%); 
+  }
+  /* SECTION PROPAGANDA */
+
+  /* FIM SECTION PROPAGANDA */
+
   /* SECTION FORMULARIO */
   #form{
-    margin-top: 1%;
     padding-inline: 5%;
+    min-height: 100vh;
   }
   /* Imagem e text */
   .form-container {
