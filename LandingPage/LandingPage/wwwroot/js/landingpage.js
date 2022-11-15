@@ -192,7 +192,7 @@ function SelectChange(e){
 function CidadeSelected(){
     var parent = cidades.parentNode;
     var input = parent.querySelector('input');
-    input.addEventListener('focusout', () =>{
+    input.addEventListener('change', () =>{
         var arr = Array.from(cidades.options);
         if(!arr.some(i => i.value.includes(input.value))){
             input.style.borderColor = "rgba(0, 0, 0, 0.5)";

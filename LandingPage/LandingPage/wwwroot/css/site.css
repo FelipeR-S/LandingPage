@@ -1,3 +1,7 @@
+:root {
+    --cor-orange: #ff6c0a;
+    --cor-purple: #322a85;
+  }
 html {
     scroll-behavior: smooth;
 }
@@ -5,7 +9,7 @@ html {
 body {
     font-family: 'Poppins';
     font-size: 1em;
-    background: rgb(42, 35, 83);
+    background: var(--cor-purple);
     color: white;
     margin: 0;
     padding: 0;
