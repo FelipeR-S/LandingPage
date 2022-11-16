@@ -39,8 +39,8 @@ section {
   height: 90vh;
   width: 100%;
   background-size: cover;
-  background-image: url(../img/landingpage/blue-sky.jpg);
-  background-position: bottom;
+  background-image: url(../img/landingpage/blue-sky.png);
+  background-position: 50%;
 }
 
 .propaganda-txt{
@@ -54,7 +54,7 @@ section {
   line-height: 1.2em;
   font-weight: 900;
   text-transform: uppercase;
-  color: var(--cor-purple);
+  word-spacing: .2em;
 }
 
 .propaganda-img{
@@ -92,6 +92,65 @@ section {
 
 }
 /* SECTION PROPAGANDA */
+
+/* SECTION INFO */
+
+#info h2{
+  padding-inline: 5%;
+}
+
+.info-conteudo{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+}
+
+.info-item{
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 25%;
+  text-align: center;
+  padding-block: 5%;
+}
+
+.info-progresso{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: conic-gradient(var(--cor-orange) 3.6deg, rgba(0, 0, 0, 0.3) 0deg);
+  margin-bottom: 10%;
+}
+
+.info-progresso::before{
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: var(--cor-purple);
+}
+
+.info-valor{
+  position: absolute;
+  font-weight: 800;
+  color: var(--cor-orange);
+  font-size: 1.25rem;
+}
+
+.info-item p{
+  margin: 0;
+}
+
+/* FIM SECTION INFO */
 
 /* SECTION FORMULARIO */
 .form-container {
@@ -364,6 +423,17 @@ dialog::backdrop {
     margin-bottom: 20%;
   }
   /* FIM SECTION PROPAGANDA */
+  .info-conteudo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .info-item{
+    padding-inline: 0;
+    padding-block: 5%;
+  }
+  /* SECTION INFO */
+
+  /* FIM SECTION INFO */
 
   /* SECTION FORMULARIO */
 .form-imagem {
@@ -385,6 +455,8 @@ dialog::backdrop {
     width: 15%;
   }
   /* FIM LAYOUT TOP LOGO */
+
+  /* SECTION PROPAGANDA */
   .propaganda-conteudo{
     height: 90vh;
   }
@@ -410,10 +482,17 @@ dialog::backdrop {
   .fx2{
     margin-top: calc(14em + 10%); 
   }
-  /* SECTION PROPAGANDA */
 
   /* FIM SECTION PROPAGANDA */
 
+  /* SECTION INFO */  
+  #info h2{
+    font-size: 3em;
+    padding-inline: 5%;
+  }
+
+  /* FIM SECTION INFO*/
+  
   /* SECTION FORMULARIO */
   #form{
     padding-inline: 5%;
@@ -459,7 +538,7 @@ dialog::backdrop {
 
   /* DIALOG */
   dialog {
-    width: 50%;
+    width: 40%;
     padding: 2%;
   }
 }

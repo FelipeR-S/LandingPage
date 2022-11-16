@@ -8,7 +8,14 @@ import cidadesJson from './cidades.json' assert {type: 'json'}
 // Propaganda
 const faixas = document.querySelectorAll('.propaganda-fx');
 
+// Info
+const sectionInfo = document.querySelector('#info');
+const infoGrafico = document.querySelectorAll('.info-progresso');
+const infoValor = document.querySelectorAll('.info-valor');
+let atualizaGrafico = false;
+
 // Form Cadastro
+const sectionCadastro = document.querySelector('#form');
 const AllSelect = document.querySelectorAll('select');
 const inputNome = document.querySelector("[name='nome']");
 const inputTelefone = document.querySelector("[name='telefone']");
@@ -29,9 +36,43 @@ const dialogBtn = document.querySelector('.dialogbtn');
 /// Functions
 
 //// SECTION PROPAGANDA /////
-function AnimaFaixa(){
-    for (var i = 0; i < faixas.length; i++){
+function AnimaFaixa() {
+    for (var i = 0; i < faixas.length; i++) {
         faixas[i].style.setProperty('transform', 'scaleX(1)');
+    }
+}
+
+//// SECTION INFO ////
+
+function AlteraValor(index, tempo) {
+    let inicio = 0;
+    let max = infoValor[index].id.replace('valor-', '');
+
+    let progresso = setInterval(() => {
+
+        if (infoValor[index].textContent.includes('%'))
+            infoValor[index].textContent = `${inicio}%`;
+        else
+            infoValor[index].textContent = `${inicio}`;
+
+        infoGrafico[index].style.background = `conic-gradient(var(--cor-orange) ${inicio * 3.6}deg, rgba(0, 0, 0, 0.3) 0deg)`
+
+        if (inicio == max) {
+            clearInterval(progresso);
+        }
+        inicio++;
+    }, tempo);
+}
+
+function AtualizaGrafico(scroll) {
+    let tempo = 20;
+    const sectionTop = sectionInfo.offsetTop;
+
+    if (scroll >= sectionTop - 250 && !atualizaGrafico){
+        AlteraValor(0, tempo);
+        AlteraValor(1, tempo);
+        AlteraValor(2, tempo);
+        atualizaGrafico = true;
     }
 }
 
@@ -74,12 +115,12 @@ function switchPadrao(padrao) {
 }
 
 // Retorna o check correto
-function GetCheckCorreto(input){
+function GetCheckCorreto(input) {
     var parent = input.parentNode;
     var correto = parent.querySelector('.fa-check');
     return correto;
 }
-function GetCheckIncorreto(input){
+function GetCheckIncorreto(input) {
     var parent = input.parentNode;
     var incorreto = parent.querySelector('.fa-xmark');
     return incorreto;
@@ -106,7 +147,7 @@ function PadraoInput(input, inputPadrao) {
 }
 
 // Eventos de espera para click, focusout e change
-function InputTXT(){
+function InputTXT() {
     inputNome.addEventListener("keypress", (e) => {
         if (!checkCharNome(e))
             e.preventDefault();
@@ -123,13 +164,13 @@ function InputTXT(){
     });
 }
 
-function InputMail(){
+function InputMail() {
     inputEmail.addEventListener("change", (e) => {
         PadraoInput(inputEmail, 'email');
     });
 }
 
-function InputTel(){
+function InputTel() {
     inputTelefone.addEventListener("keypress", (e) => {
         if (!checkCharTelefone(e))
             e.preventDefault();
@@ -140,9 +181,9 @@ function InputTel(){
     });
 }
 
-function InputIdade(){
-    inputIdade.addEventListener("change", (e) =>{
-        if (inputIdade.value != ""){
+function InputIdade() {
+    inputIdade.addEventListener("change", (e) => {
+        if (inputIdade.value != "") {
             inputIdade.style.borderColor = "limegreen";
         }
         else
@@ -177,9 +218,9 @@ function ChangeCidades(id) {
 // Remove cidades de select ao alterar estado
 
 // Get Estado ID
-function AlteraCidades(){
+function AlteraCidades() {
     estados.addEventListener('change', (e) => {
-        estadoId = estados.options[estados.selectedIndex].name;  
+        estadoId = estados.options[estados.selectedIndex].name;
         if (cidades.childElementCount > 1) {
             $("#form-cidade").empty();
         }
@@ -188,9 +229,9 @@ function AlteraCidades(){
 }
 
 // All Select event
-function SelectChange(e){
-    if (IsSelect(e)){        
-        if (e.target.value != "select-one"){
+function SelectChange(e) {
+    if (IsSelect(e)) {
+        if (e.target.value != "select-one") {
             e.target.style.borderColor = "limegreen";
         }
         else
@@ -198,44 +239,47 @@ function SelectChange(e){
     }
 }
 
-function CidadeSelected(){
+function CidadeSelected() {
     var parent = cidades.parentNode;
     var input = parent.querySelector('input');
-    input.addEventListener('change', () =>{
+    input.addEventListener('change', () => {
         var arr = Array.from(cidades.options);
-        if(!arr.some(i => i.value.includes(input.value))){
+        //const index = arr.find(i => i.value.toLowerCase() == input.value.toLowerCase());
+        var cidade = arr.find(i => i.value.toLowerCase() == input.value.toLowerCase());
+        if (cidade == null) {
             input.style.borderColor = "rgba(0, 0, 0, 0.5)";
             input.value = "";
         }
-        else{
+        else {
+            input.value = cidade.value;
             input.style.borderColor = "limegreen";
         }
     });
 }
 
 // verifica se o objeto é um SELECT
-function IsSelect(e){
+function IsSelect(e) {
     var e = window.e || e;
     if (e.target.tagName != 'SELECT') return false;
     else return true;
 }
 
 /// Verifica se a opção selecionada é default
-function IsDefault(){
-    
-    AllSelect.forEach((e) =>{
-        if(e.value == "select-one")
+function IsDefault() {
+
+    AllSelect.forEach((e) => {
+        if (e.value == "select-one")
             e.value = "";
     });
 }
 
 /// DIALOG
 
-function OpenModal(){
+function OpenModal() {
     dialog.showModal();
 }
 
-dialogBtn.addEventListener('click', (e) =>{
+dialogBtn.addEventListener('click', (e) => {
     dialog.close();
 });
 
@@ -254,9 +298,9 @@ InputIdade();
 CidadeSelected();
 
 // Verifica btn enviar
-btnEnviar.addEventListener('click', (e) =>{
+btnEnviar.addEventListener('click', (e) => {
     IsDefault();
-    if(inputBairro.style.borderColor == "red"){
+    if (inputBairro.style.borderColor == "red") {
         inputBairro.value = "";
     }
 });
@@ -267,7 +311,12 @@ document.addEventListener('change', SelectChange, false);
 // Ação ao carregar a página
 window.addEventListener('load', (event) => {
     AnimaFaixa();
-   if(dialogTxt.textContent != null && dialogTxt.textContent != ""){
-       OpenModal();
-   }
+    if (dialogTxt.textContent != null && dialogTxt.textContent != "") {
+        $(document).scrollTop(sectionCadastro.offsetTop);
+        OpenModal();
+    }
 });
+
+window.onscroll = () => {
+    AtualizaGrafico(scrollY);
+}

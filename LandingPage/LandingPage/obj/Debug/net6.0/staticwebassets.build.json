@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I2DLLLxgujvXDG7M69a8fR5SfCX7JKfI4R8JthyUciw=",
+  "Hash": "3fGjZ1VZDLfm9K412ytTI6yQIRSszFsEgnZxRTfWq1Q=",
   "Source": "LandingPage",
   "BasePath": "_content/LandingPage",
   "Mode": "Default",
@@ -1122,12 +1122,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPage\\LandingPage\\LandingPage\\wwwroot\\img\\landingpage\\blue-sky.jpg",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPage\\LandingPage\\LandingPage\\wwwroot\\img\\landingpage\\blue-sky.png",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPage\\LandingPage\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/blue-sky.jpg",
+      "RelativePath": "img/landingpage/blue-sky.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1136,24 +1136,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\blue-sky.jpg"
-    },
-    {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPage\\LandingPage\\LandingPage\\wwwroot\\img\\landingpage\\building1.jpg",
-      "SourceId": "LandingPage",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPage\\LandingPage\\LandingPage\\wwwroot\\",
-      "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/building1.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\building1.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\blue-sky.png"
     },
     {
       "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPage\\LandingPage\\LandingPage\\wwwroot\\img\\landingpage\\building1.png",
