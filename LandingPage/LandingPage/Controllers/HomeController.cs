@@ -20,6 +20,7 @@ namespace LandingPage.Controllers
         public IActionResult LandingPage()
         {
 			ViewData["Resposta"] = _resposta;
+            _resposta = "";
             return View();
         }
 
