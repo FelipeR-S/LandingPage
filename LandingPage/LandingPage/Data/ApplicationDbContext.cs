@@ -12,10 +12,15 @@ namespace LandingPage.Data
         {
         }
 
+        /// <summary>
+        /// Metodo para gerar indormações que serão migradas ao Banco de dados
+        /// </summary>
+        /// <param name="builder"></param>
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
+            // classes instanciadas para criação da migration
             builder.Entity<Cliente>().HasIndex(e => e.Email).IsUnique();
             builder.Entity<NewsLetter>();
         }
