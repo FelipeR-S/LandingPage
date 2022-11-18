@@ -11,19 +11,28 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+// Gerencia login no DB
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+// Cria serviço que vai gerenciar a criação do DB
 builder.Services.AddTransient<IDataService, DataService>();
 builder.Services.AddTransient<ApplicationDbContext>();
+
+// Cria serviço que gerencia as tabelas de Cadastro de Cliente
 builder.Services.AddTransient<ICadastroRepository, CadastroRepository>();
+// Cria serviço que gerencia as tabelas de Cadastro de Email de NewsLetter
+builder.Services.AddTransient<INewsLetterRepository, NewsLetterRepository>();
 
 var app = builder.Build();
 
+// Gera scope para inicialização do banco de dados
 var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
 
 #pragma warning disable CS8602 // Desreferência de uma referência possivelmente nula.
+// Inicializa o banco de dados
 services.GetService<IDataService>().InitDb().Wait();
 #pragma warning restore CS8602 // Desreferência de uma referência possivelmente nula.
 
@@ -47,6 +56,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Define a rota principal como sendo a LandingPage
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=LandingPage}/{id?}");

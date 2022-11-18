@@ -3,6 +3,7 @@
 }
 @{
     var mensagem = ViewData["resposta"];
+    var newsLetter = new NewsLetter();
 }
 @model Cliente
 <section id="logo">
@@ -239,10 +240,10 @@
                 </div>
             </div>
             <div class="contato-form">
-                <form action="CadastraNewsLetter" method="post">
+                <form asp-action="CadastraNewsLetter" method="post">
                     <label for="email">Seu email:<i class="fa-solid fa-check"></i>
                         <i class="fa-solid fa-xmark"></i></label><br>
-                    <input id="contato-email" name="email" type="email" maxlength="40" required>
+                    <input id="contato-email" name="email" asp-for="@newsLetter.Email" type="email" maxlength="40" required>
                     <button type="submit" class="contato-cadastra">Cadastrar</button>
                 </form>
             </div>

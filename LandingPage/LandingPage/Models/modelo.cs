@@ -6,6 +6,9 @@ using System.Runtime.Serialization;
 
 namespace LandingPage.Models
 {
+    /// <summary>
+    /// Base para construções de outras classes do modelo
+    /// </summary>
     [DataContract]
     public abstract class BaseModel
     {
@@ -13,6 +16,9 @@ namespace LandingPage.Models
         public int Id { get; set; }
     }
 
+    /// <summary>
+    /// Classe responsável por gerir informações do cliente cadastrado
+    /// </summary>
     public class Cliente : BaseModel
     {
         public Cliente()
@@ -34,6 +40,10 @@ namespace LandingPage.Models
         public DateTime DataCadastro { get; private set; } = DateTime.Now;
 
     }
+
+    /// <summary>
+    /// Classe responsável por gerir informações de email de NewsLetter
+    /// </summary>
     public class NewsLetter : BaseModel
     {
         public NewsLetter()
