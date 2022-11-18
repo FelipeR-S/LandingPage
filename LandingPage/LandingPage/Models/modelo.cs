@@ -34,4 +34,12 @@ namespace LandingPage.Models
         public DateTime DataCadastro { get; private set; } = DateTime.Now;
 
     }
+    public class NewsLetter : BaseModel
+    {
+        public NewsLetter()
+        {
+        }
+        [Key]
+        public string Email { get; set; } = string.Empty;
+    }
 }
