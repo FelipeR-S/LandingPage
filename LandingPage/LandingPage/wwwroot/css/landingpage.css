@@ -2,9 +2,12 @@
   --cor-orange: #ff6c0a;
   --cor-purple: #322a85;
   --cor-purple-ligth: #58519b;
+  --cor-black: rgb(27, 27, 27);
 }
 section {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 /* SECTION LOGO */
 #logo {
@@ -433,6 +436,114 @@ input:-webkit-autofill {
 }
 /* FIM SECTION FORMULARIO */
 
+/* SECTION CONTATO */
+.contato-content{
+  height: 100%;
+  width: 100%;
+  background: var(--cor-black);
+  padding: 5%;
+}
+
+.contato-logo-top, .contato-logo-bottom{
+  display: block;
+  background-image: url(../img/landingpage/logo_white.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 2%;
+}
+
+.contato-logo-bottom{
+  display: none;
+}
+
+.contato-icon-links{ 
+  margin-block: 10%;
+}
+
+.contato-icon-links a{
+  text-decoration: none;
+  color: white;
+}
+
+.contato-icon-links p{
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+}
+
+.contato-icon-links i{
+  color: var(--cor-orange);
+  font-size: 1.5em;
+  margin-right: 5%;
+  transition: all 350ms ease-in-out;
+}
+.contato-icon-links i:hover{
+  font-size: 2em;
+  color: white;  
+  text-shadow: 0 0 10px var(--cor-orange);
+}
+
+.contato-form{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  padding-block: 2%;
+}
+.contato-form label{
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.contato-form input, .contato-form button{
+  margin: 0;
+  padding: 0;
+  height: 2rem;
+  font-size: .9rem;
+}
+
+.contato-form input{
+  padding-left: 2%;
+  color: white;
+  width: 69%;
+  border: .1rem solid var(--cor-orange);
+  border-radius: 2rem 0 0 2rem;
+  background: var(--cor-black);
+}
+
+.contato-form button{
+  color: white;
+  border: .1rem solid var(--cor-orange);
+  background: var(--cor-orange);
+  width: 29%;
+  border-radius: 0 2rem 2rem 0;
+  transition: all 320ms ease-in-out;
+}
+
+.contato-form button:hover{
+  box-shadow: 0 0 15px var(--cor-orange);
+}
+
+.contato-form i {
+  position: absolute;
+  top: calc(100% + .8rem);
+  left: 300%;
+}
+
+.contato-form .fa-check {
+  color: limegreen;
+  display: none;
+}
+.contato-form .fa-xmark {
+  color: red;
+  display: none;
+}
+
+/* SECTION CONTATO */
+
 /* DIALOG MODAL */
 
 dialog {
@@ -632,6 +743,44 @@ dialog::backdrop {
   }
   /* FIM SECTION FORMULARIO */
 
+    /* SECTION CONTATO */
+    .contato-content{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+  
+    .contato-links{
+      width: 45%;
+      padding: 2%;
+      padding-left: 0;
+    }
+  
+    .contato-logo-top{
+      display: none;
+    }
+
+    .contato-newsletter{
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      width: 45%;
+      padding: 2%;
+      padding-right: 0;
+    }
+  
+    .contato-logo-bottom{
+      width: 70%;
+      background-position: right;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .contato-form i {
+      left: 400%;
+    }
+
   /* DIALOG */
   dialog {
     width: 40%;
@@ -649,5 +798,9 @@ dialog::backdrop {
   /* SECTION FORM */
   .form-img-txt {
     width: 40%;
+  }
+
+  .contato-form i {
+    left: 700%;
   }
 }

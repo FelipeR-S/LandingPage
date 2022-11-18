@@ -28,13 +28,16 @@ const AllSelect = document.querySelectorAll('select');
 const inputNome = document.querySelector("[name='nome']");
 const inputTelefone = document.querySelector("[name='telefone']");
 const inputBairro = document.querySelector("[name='bairro']");
-const inputEmail = document.querySelector("[name='email']");
+const inputEmail = document.querySelector("#form-email");
 const inputIdade = document.querySelector("[name='nascimento']");
 
 const estados = document.querySelector('#form-estado');
 const cidades = document.querySelector('#form-cidade');
 const btnEnviar = document.querySelector('.form-enviar');
 let estadoId;
+
+// Contato
+const inputEmailContato = document.querySelector("#contato-email");
 
 // Dialog
 const dialog = document.querySelector('dialog');
@@ -266,6 +269,9 @@ function InputTXT() {
 }
 
 function InputMail() {
+    inputEmailContato.addEventListener("change", (e) => {
+        PadraoInput(inputEmailContato, 'email');
+    });
     inputEmail.addEventListener("change", (e) => {
         PadraoInput(inputEmail, 'email');
     });

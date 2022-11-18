@@ -115,7 +115,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail *</label>
-                    <input name="email" type="email" asp-for="@Model.Email" maxlength="40" required />
+                    <input name="email" id="form-email" type="email" asp-for="@Model.Email" maxlength="40" required />
                     <i class="fa-solid fa-check"></i>
                     <i class="fa-solid fa-xmark"></i>
                 </div>
@@ -202,11 +202,58 @@
                 </div>
             </form>
         </div>
-        <dialog>
-            <div class="dialog">
-                <p class="dialogtxt">@mensagem</p>
-                <button class="dialogbtn">Fechar</button>
-            </div>
-        </dialog>
     </div>
 </section>
+<section id="contato">
+    <div class="contato-content">
+        <div class="contato-links">
+            <div class="contato-logo-top">
+            </div>
+            <div class="contato-txt">
+                <p>A Modernliving é uma construtora e corretora especializada em vendas de imóveis de alto padrão.
+                    Prezamos por qualidade desde a planta até a entrega do imóvel.</p>
+            </div>
+            <div class="contato-icon-links">
+                <a href="#">
+                    <p><i class="fa-brands fa-facebook"></i>@Convert.ToString("@modernliving")</p>
+                </a>
+                <a href="#">
+                    <p><i class="fa-brands fa-square-instagram"></i>@Convert.ToString("@modernliving")</p>
+                </a>
+                <a href="#">
+                    <p><i class="fa-brands fa-square-twitter"></i>@Convert.ToString("@modernliving")</p>
+                </a>
+                <a href="#">
+                    <p><i class="fa-solid fa-globe"></i>@Convert.ToString("@modernliving")</p>
+                </a>
+                <a href="#">
+                    <p><i class="fa-brands fa-square-whatsapp"></i>@Convert.ToString("(11) 99999 9999")</p>
+                </a>
+                <a href="#">
+                    <p><i class="fa-solid fa-envelope"></i>@Convert.ToString("modernliving@modernliving.com.br")</p>
+                </a>
+                <a href="#">
+                    <p><i class="fa-solid fa-location-dot"></i>Av. São Paulo, 123456, Jardins, São Paulo/SP</p>
+                </a>
+            </div>
+        </div>
+        <div class="contato-newsletter">
+            <div class="contato-logo-bottom">
+            </div>
+            <div class="contato-form">
+                <form action="CadastraNewsLetter" method="post">
+                    <label for="email">Seu email:<i class="fa-solid fa-check"></i>
+                    <i class="fa-solid fa-xmark"></i></label><br>
+                    <input id="contato-email" name="email" type="email" maxlength="40" required>
+                    <button type="submit" class="contato-cadastra">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<dialog>
+    <div class="dialog">
+        <p class="dialogtxt">@mensagem</p>
+        <button class="dialogbtn">Fechar</button>
+    </div>
+</dialog>
