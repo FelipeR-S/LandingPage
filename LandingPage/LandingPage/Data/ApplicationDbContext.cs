@@ -17,6 +17,7 @@ namespace LandingPage.Data
             base.OnModelCreating(builder);
 
             builder.Entity<Cliente>().HasIndex(e => e.Email).IsUnique();
+            builder.Entity<NewsLetter>();
         }
     }
 
