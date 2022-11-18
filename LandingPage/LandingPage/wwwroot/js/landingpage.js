@@ -14,6 +14,14 @@ const infoGrafico = document.querySelectorAll('.info-progresso');
 const infoValor = document.querySelectorAll('.info-valor');
 let atualizaGrafico = false;
 
+// Carousel
+const carouselNextBtn = document.querySelector('.carousel-btn-right');
+const carouselPrevBtn = document.querySelector('.carousel-btn-left');
+const carouselLista = document.querySelector('.carousel-lista');
+const carouselSlide = Array.from(carouselLista.children);
+const carouselNav = document.querySelector('.carousel-nav');
+let carouselIndex = [];
+
 // Form Cadastro
 const sectionCadastro = document.querySelector('#form');
 const AllSelect = document.querySelectorAll('select');
@@ -43,7 +51,6 @@ function AnimaFaixa() {
 }
 
 //// SECTION INFO ////
-
 function AlteraValor(index, tempo) {
     let inicio = 0;
     let max = infoValor[index].id.replace('valor-', '');
@@ -68,13 +75,107 @@ function AtualizaGrafico(scroll) {
     let tempo = 20;
     const sectionTop = sectionInfo.offsetTop;
 
-    if (scroll >= sectionTop - 250 && !atualizaGrafico){
+    if (scroll >= sectionTop - 250 && !atualizaGrafico) {
         AlteraValor(0, tempo);
         AlteraValor(1, tempo);
         AlteraValor(2, tempo);
         atualizaGrafico = true;
     }
 }
+
+//// SECTON CAROUSEL ////
+// Remove botões de index ao carousel
+function RemoveIndexCarousel() {
+    if (carouselIndex.length > 1) {
+        carouselIndex.forEach((child) => {
+            if (!child.classList.contains('current-slide'))
+                carouselNav.removeChild(child);
+        });
+    }
+    const currentSlide = carouselLista.querySelector('.current-slide');
+    const targetSlide = carouselSlide[0];
+    MudaSlide(currentSlide, targetSlide);
+}
+// adiciona botões de index ao carousel
+function AddIndexCarousel() {
+    RemoveIndexCarousel();
+    let total = carouselSlide.length;
+    if (window.innerWidth > 1800) total = carouselSlide.length -1;
+
+    // cria um botão e adicona a div
+    for (let i = 1; i < total; i++) {
+        let btn = document.createElement("button");
+        btn.classList.add("carousel-index");
+        carouselNav.appendChild(btn);
+    }
+    carouselIndex = Array.from(carouselNav.children);
+}
+
+// ajusta slides no tamanho correto
+function AjustaSlides() {
+    // get width of slide
+    let carouselSlideWidth = carouselSlide[0].getBoundingClientRect().width;
+    let contador = 0;
+    carouselSlide.forEach((slide) => {
+        // adiciona a mesma width e ajusta o posicionamento
+        slide.style.left = carouselSlideWidth * contador + 'px';
+        contador++;
+    });
+}
+// Atualiza o slide a ser exibido
+function MudaSlide(currentSlide, targetSlide) {
+    carouselLista.style.transform = `translateX(-${targetSlide.style.left})`;
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+
+}
+// botões
+function NextSlide() {
+    // Get current e next slide
+    const currentSlide = carouselLista.querySelector('.current-slide');
+    let index = carouselSlide.findIndex(i => i === currentSlide);
+    // movimenta para esquerda
+    if (index == carouselIndex.length - 1) NavIndex(0);
+    else {
+        NavIndex(index + 1);
+    }
+}
+function PrevSlide() {
+    // Get current e next slide
+    const currentSlide = carouselLista.querySelector('.current-slide');
+    let index = carouselSlide.findIndex(i => i === currentSlide);
+    // movimenta para esquerda
+    if (index == 0) NavIndex(carouselIndex.length - 1);
+    else {
+        NavIndex(index - 1);
+    }
+}
+function NavIndex(index) {
+    const currentSlide = carouselLista.querySelector('.current-slide');
+    const targetSlide = carouselSlide[index];
+
+    MudaSlide(currentSlide, targetSlide);
+    // Mostra o botão selecionado
+    carouselIndex.forEach(i => i.classList.remove('current-slide'));
+    carouselIndex[index].classList.add('current-slide');
+}
+
+function CarouselAutomatico(){
+    let tempo = 5000;
+    let automatico = setInterval(() => {
+        if (window.innerWidth <= 720) {
+            clearInterval(automatico);
+        }
+        const currentSlide = carouselLista.querySelector('.current-slide');
+        let index = carouselSlide.findIndex(i => i === currentSlide) + 1;
+        if (index == carouselIndex.length){
+            index = 0;
+        }
+        NavIndex(index);
+    }, tempo);
+}
+
+//// FIM SECTION CAROUSEL ////
 
 //// SECTION FORM /////
 // Input pattern
@@ -244,7 +345,6 @@ function CidadeSelected() {
     var input = parent.querySelector('input');
     input.addEventListener('change', () => {
         var arr = Array.from(cidades.options);
-        //const index = arr.find(i => i.value.toLowerCase() == input.value.toLowerCase());
         var cidade = arr.find(i => i.value.toLowerCase() == input.value.toLowerCase());
         if (cidade == null) {
             input.style.borderColor = "rgba(0, 0, 0, 0.5)";
@@ -266,11 +366,13 @@ function IsSelect(e) {
 
 /// Verifica se a opção selecionada é default
 function IsDefault() {
-
     AllSelect.forEach((e) => {
         if (e.value == "select-one")
             e.value = "";
     });
+    if (inputBairro.style.borderColor == "red") {
+        inputBairro.value = "";
+    }
 }
 
 /// DIALOG
@@ -285,6 +387,25 @@ dialogBtn.addEventListener('click', (e) => {
 
 /// Call Functions
 
+//// Carousel ////
+carouselNextBtn.addEventListener('click', (e) => {
+    NextSlide();
+});
+
+carouselPrevBtn.addEventListener('click', (e) => {
+    PrevSlide();
+});
+
+carouselNav.addEventListener('click', (e) => {
+    const isButton = e.target.closest('button');
+    if (!isButton) return;
+    const indexClick = carouselIndex.findIndex(i => i === isButton);
+    NavIndex(indexClick);
+});
+
+CarouselAutomatico();
+
+//// FORM ////
 // Carrega select Estado
 CarregaEstados();
 // Altera Cidades de acordo com o estado selecionado
@@ -300,23 +421,31 @@ CidadeSelected();
 // Verifica btn enviar
 btnEnviar.addEventListener('click', (e) => {
     IsDefault();
-    if (inputBairro.style.borderColor == "red") {
-        inputBairro.value = "";
-    }
 });
 
 // verifica todos os select que foram selecionados
 document.addEventListener('change', SelectChange, false);
 
+
+//// GERAIS ////
 // Ação ao carregar a página
 window.addEventListener('load', (event) => {
     AnimaFaixa();
+    AjustaSlides();
+    AddIndexCarousel();
     if (dialogTxt.textContent != null && dialogTxt.textContent != "") {
         $(document).scrollTop(sectionCadastro.offsetTop);
         OpenModal();
     }
 });
 
-window.onscroll = () => {
+// Ações durante scroll da página
+window.addEventListener('scroll', (e) => {
     AtualizaGrafico(scrollY);
-}
+});
+
+// Ações durante mudança de tamanho da página
+window.addEventListener('resize', (e) => {
+    AjustaSlides();
+    AddIndexCarousel();
+});
