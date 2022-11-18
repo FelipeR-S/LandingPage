@@ -1,0 +1,889 @@
+:root {
+  --cor-orange: #ff6c0a;
+  --cor-purple: #322a85;
+  --cor-purple-ligth: #58519b;
+  --cor-black: rgb(27, 27, 27);
+}
+section {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* SECTION LOGO */
+#logo {
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+}
+
+.logo-layout {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cor-purple);
+  align-items: center;
+}
+.logo-img {
+  text-align: center;
+  width: 100%;
+  height: 80%;
+  background-image: url(../img/landingpage/logo_white.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* FIM SECTION LOGO */
+
+/* SECTION PROPAGANDA */
+.propaganda-conteudo {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-image: url(../img/landingpage/blue-sky.png);
+  background-position: 50%;
+}
+
+.propaganda-txt {
+  padding-top: 20%;
+  padding-right: 5%;
+  text-align: right;
+  z-index: 1;
+}
+.propaganda-txt-big {
+  font-size: 2em;
+  line-height: 1.2em;
+  font-weight: 900;
+  text-transform: uppercase;
+  word-spacing: 0.2em;
+}
+
+.propaganda-img {
+  position: absolute;
+  bottom: 0;
+  background-image: url(../img/landingpage/building1.png);
+  background-size: 100%;
+  height: 60%;
+  width: 80%;
+  left: calc(50% - 40%);
+  background-repeat: no-repeat;
+}
+
+/* detalhes propaganda */
+.propaganda-fx {
+  margin-top: calc(5.2em + 20%);
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  transition: all 1s ease-in;
+}
+
+.fx1 {
+  height: 4em;
+  background: var(--cor-purple);
+  transform-origin: right;
+}
+
+.fx2 {
+  height: 1em;
+  background: var(--cor-orange);
+  transform-origin: left;
+  transition-delay: 0.5s;
+  margin-top: calc(10em + 20%);
+}
+/* SECTION PROPAGANDA */
+
+/* SECTION INFO */
+
+#info h2 {
+  padding-inline: 5%;
+}
+
+.info-conteudo {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items:initial;
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+}
+
+.info-item {
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 25%;
+  text-align: center;
+  padding-block: 5%;
+}
+
+.info-progresso {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: conic-gradient(var(--cor-orange) 3.6deg, rgba(0, 0, 0, 0.3) 0deg);
+  margin-bottom: 10%;
+}
+
+.info-progresso::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: var(--cor-purple);
+}
+
+.info-valor {
+  position: absolute;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.info-item p {
+  margin: 0;
+}
+
+/* FIM SECTION INFO */
+
+/* SECTION CAROUSEL */
+.carousel {
+  background: var(--cor-black);
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  padding-block: 10%;
+  margin: 0 auto;
+}
+
+.carousel-conteudo {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-lista {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform .7s ease-in-out;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  z-index: 1;
+  transition: all .3s ease-in;
+  color: var(--cor-orange);
+  font-size: 2em;
+}
+.carousel-btn:hover {
+  color: var(--cor-orange);
+}
+
+.carousel-btn-left {
+  left: 0;
+}
+
+.carousel-btn-right {
+  right: 0;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0;
+}
+
+.carousel-index {
+  background: var(--cor-orange);
+  opacity: .3;
+  border: 0;
+  border-radius: 50%;
+  height: .7rem;
+  width: .7rem;
+  margin: 0 1%;
+  transition: all .3s ease-in;
+}
+
+.carousel-index:hover,
+.carousel-index.current-slide{
+  opacity: 1;
+}
+
+/* SECTION CAROUSEL FIM */
+
+/* SECTION FORMULARIO */
+.form-container {
+  width: 100%;
+  height: 100%;
+}
+/* Imagem Form */
+.form-imagem {
+  width: 100%;
+  background-image: url(../img/landingpage/happy-couple.png);
+  background-size: cover;
+  background-position: 58% 0%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.form-ajuste-img {
+  display: flex;
+  padding: 3%;
+  padding-top: 5%;
+  width: 100%;
+  height: 100%;
+}
+
+.form-img-txt {
+  color: #111;
+  margin-top: 0;
+}
+
+.form-img-txt span .form-img-txt-big {
+  font-size: 2em;
+  font-weight: 900;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: var(--cor-purple);
+}
+
+.form-img-txt p {
+  font-size: 0.9em;
+  margin-top: 2%;
+  font-weight: 400;
+  width: 65%;
+}
+
+/* Formulario */
+
+.form-layout {
+  padding-block: 5%;
+  padding-inline: 5%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: center;
+}
+.form-group {
+  position: relative;
+  margin-block: 0.5rem;
+}
+
+/* Icons */
+.form-group i {
+  position: absolute;
+  top: 2.2em;
+  right: 1.5em;
+}
+
+.form-group .fa-check {
+  color: limegreen;
+  display: none;
+}
+.form-group .fa-xmark {
+  color: red;
+  display: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+  margin-top: -0.2em;
+  opacity: 100;
+}
+
+/* input e select */
+
+.form-group input,
+.form-group select {
+  font-weight: 200;
+  border-radius: 1rem;
+  border: rgba(0, 0, 0, 0.5) solid 0.15rem;
+  width: 100%;
+  padding-block: 0.25rem;
+  padding-inline: 1rem;
+  background: none;
+  color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none !important;
+  border: rgb(206, 206, 206) 0.15rem solid;
+}
+
+.form-group select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, var(--cor-purple), var(--cor-purple));
+  background-position: calc(100% - 20px) 0.9em, calc(100% - 15px) 0.9em, 100%;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+.form-group select option {
+  font-weight: 200;
+  background-color: var(--cor-purple);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: url(../img/landingpage/calendario-ico.svg);
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.form-estado-cidade {
+  margin-block: -0.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+.cidade {
+  width: 70%;
+}
+
+.form-group #form-cidade {
+  min-width: 100%;
+}
+
+select:-webkit-autofill,
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px var(--cor-purple-ligth) inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: white;
+}
+
+/* btn form */
+.form-group button {
+  position: relative;
+  letter-spacing: 0.2rem;
+  border-radius: 2rem;
+  width: 100%;
+  padding-block: 0.5rem;
+  margin-block: 4%;
+  font-weight: 700;
+  background: none;
+  text-shadow: 0 0 0.25rem rgba(255, 255, 255, 0.5);
+  color: white;
+  border: 0.3rem var(--cor-orange) solid;
+  box-shadow: 0 0 0.5rem var(--cor-orange);
+  transition: all 0.5s ease-in-out;
+}
+.form-group button:hover {
+  box-shadow: 0 0 1.5rem var(--cor-orange);
+}
+
+.form-group button::after {
+  content: "";
+  border-radius: 2rem;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: var(--cor-orange);
+  transition: transform 0.8s;
+  transform-origin: 1 1;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.form-group button:hover::after {
+  transform: scaleX(1);
+}
+/* FIM SECTION FORMULARIO */
+
+/* SECTION CONTATO */
+.contato-content{
+  height: 100%;
+  width: 100%;
+  background: var(--cor-black);
+  padding: 5%;
+}
+
+.contato-chamada{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-block: 15%;
+}
+
+.contato-chamada a{
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cor-orange);
+}
+
+.contato-chamada a:hover{
+  color: var(--cor-orange);
+  opacity: .7;
+}
+
+.contato-txt span{
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.contato-txt p{
+  margin-top: 5%;
+}
+
+.contato-icon-links{
+  display: flex;
+  justify-content: space-around;
+  margin-block: 5%;
+}
+
+.contato-icon-links i{
+  color: var(--cor-orange);
+  font-size: 1.5em;
+  margin-right: 5%;
+  transition: all 350ms ease-in-out;
+}
+
+.contato-icon-links i:hover{
+  font-size: 2em;
+  color: white;  
+  text-shadow: 0 0 10px var(--cor-orange);
+}
+
+.contato-enderecos{
+  margin-block: 10%;
+}
+.contato-local{
+  margin-block: 10%;
+}
+
+.contato-local-cidade{
+  text-align: left;
+}
+.contato-local p{
+  margin-bottom: 2%;
+}
+
+.contato-logo-bottom{
+  display: block;
+  background-image: url(../img/landingpage/logo_white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 2%;
+}
+
+.contato-form{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  padding-block: 2%;
+}
+.contato-form label{
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.contato-form input, .contato-form button{
+  margin: 0;
+  padding: 0;
+  height: 2rem;
+  font-size: .9rem;
+}
+
+.contato-form input{
+  padding-left: 2%;
+  color: white;
+  width: 69%;
+  border: .1rem solid var(--cor-orange);
+  border-radius: 2rem 0 0 2rem;
+  background: var(--cor-black);
+}
+
+.contato-form button{
+  color: white;
+  border: .1rem solid var(--cor-orange);
+  background: var(--cor-orange);
+  width: 29%;
+  border-radius: 0 2rem 2rem 0;
+  transition: all 320ms ease-in-out;
+}
+
+.contato-form button:hover{
+  box-shadow: 0 0 15px var(--cor-orange);
+}
+
+.contato-form i {
+  position: absolute;
+  top: calc(100% + .8rem);
+  left: 300%;
+}
+
+.contato-form .fa-check {
+  color: limegreen;
+  display: none;
+}
+.contato-form .fa-xmark {
+  color: red;
+  display: none;
+}
+
+/* SECTION CONTATO */
+
+/* DIALOG MODAL */
+
+dialog {
+  width: 90%;
+  padding: 10%;
+  border-radius: 1rem;
+  border: none;
+  text-align: center;
+  background-color: var(--cor-purple);
+  color: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+dialog::backdrop {
+  background-color: rgba(26, 1, 46, 0.5);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
+  border-radius: 1.5em;
+  margin-inline: 0 auto;
+}
+
+.dialog {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialogbtn {
+  width: 40%;
+  height: 2.5rem;
+  border-radius: 2.5rem;
+  border: 0.2rem var(--cor-orange) solid;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+.dialogbtn:hover {
+  background-color: var(--cor-orange);
+}
+
+/* @mediaQueries */
+/* 720px W */
+@media (min-width: 720px) {
+  /* LAYOUT TOP LOGO */
+  /* FIM LAYOUT TOP LOGO */
+
+  /* SECTION PROPAGANDA */
+  .propaganda-conteudo {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    height: 100%;
+  }
+
+  .propaganda-img {
+    left: 5%;
+    width: 40%;
+    height: 90%;
+  }
+
+  .propaganda-txt {
+    margin-bottom: 20%;
+  }
+  /* FIM SECTION PROPAGANDA */
+
+  /* SECTION INFO */
+  .info-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
+  }
+  .info-item {
+    padding-inline: 0;
+    padding-block: 5%;
+  }
+
+  .info-item p {
+    padding-inline: 5%;
+  }
+  /* FIM SECTION INFO */
+
+  /* SECTION CAROUSEL */
+  .carousel {
+    padding-bottom: 5%;
+  }
+  .carousel-btn{
+    color: black;
+  }
+  /* FIM SECTION CAROUSEL */
+  /* SECTION FORMULARIO */
+  .form-imagem {
+    height: 100%;
+    background-position: 58% 100%;
+  }
+
+  .form-img-txt {
+    margin-bottom: 50%;
+  }
+  /* FIM SECTION FORMULARIO */
+  /* SECTION CONTATO */
+  .contato-chamada{
+    margin-block: 5%;
+  }
+  .contato-txt{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .contato-icon-links{
+    margin-top: 5%;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+
+  .contato-enderecos{
+    display: flex;
+    flex-flow: row nowrap;
+    gap:2rem;
+  }
+  .contato-local{
+    margin-block: 0;
+  }
+
+  .contato-form i {
+    left: 650%;
+  }
+
+}
+/* 1200px W */
+
+@media (min-width: 1200px) {
+  /* LAYOUT TOP LOGO */
+  .logo-layout img {
+    width: 15%;
+  }
+  /* FIM LAYOUT TOP LOGO */
+
+  /* SECTION PROPAGANDA */
+  .propaganda-conteudo {
+    height: 90vh;
+  }
+
+  .propaganda-txt {
+    padding-top: 10%;
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .propaganda-txt-big {
+    font-size: 2.5em;
+    line-height: 1em;
+  }
+  .propaganda-fx {
+    margin-top: calc(8.2em + 10%);
+  }
+
+  .fx1 {
+    height: 5em;
+  }
+
+  .fx2 {
+    margin-top: calc(14em + 10%);
+  }
+
+  /* FIM SECTION PROPAGANDA */
+
+  /* SECTION INFO */
+  #info h2 {
+    font-size: 3em;
+    padding-inline: 5%;
+  }
+
+  /* FIM SECTION INFO*/
+
+  /* SECTION CAROUSEL */
+  .carousel {
+    padding-block: 5%;
+  }
+
+  .carousel-slide {
+    height: 80vh;
+  }
+
+  /* FIM SECTION CAROUSEL */
+
+  /* SECTION FORMULARIO */
+  #form {
+    padding-inline: 5%;
+    min-height: 100vh;
+  }
+  /* Imagem e text */
+  .form-container {
+    display: flex;
+    flex-flow: row nowrap;
+    box-shadow: 0px 20px 10px -15px #111;
+  }
+  .form-imagem {
+    background-position: 50% 0%;
+    height: auto;
+  }
+  .form-img-txt {
+    width: 65%;
+  }
+
+  .form-img-txt span {
+    font-size: 1.3em;
+  }
+
+  .form-img-txt span .form-img-txt-big {
+    font-size: 2.5em;
+    font-weight: 900;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: var(--cor-purple);
+  }
+
+  .form-img-txt p {
+    font-size: 1em;
+    width: 90%;
+  }
+
+  /* formulario*/
+  .form-layout {
+    padding-block: 0;
+    width: 45%;
+  }
+  /* FIM SECTION FORMULARIO */
+
+    /* SECTION CONTATO */
+    .contato-content{
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 3rem;
+    }
+
+    .contato-chamada{
+      text-align: left;
+    }
+
+    .contato-links{
+      width: 50%;
+    }
+
+    .contato-txt{
+      width: 100%;
+      text-align: left;
+    }
+
+    .contato-newsletter{
+      display: flex;
+      flex-flow: column nowrap;
+      width: 100%;
+      padding-right: 0;
+      align-items: center;
+    }
+
+    .contato-enderecos{
+      margin-block: 5%;
+    }
+  
+    .contato-logo-bottom{
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .contato-form i {
+      left: 400%;
+    }
+
+  /* DIALOG */
+  dialog {
+    width: 40%;
+    padding: 2%;
+  }
+}
+
+@media (min-width: 1800px) {
+  /* SECTION CAROUSEL */  
+
+  .carousel-slide {
+    width: 50%;
+  }
+
+  /* SECTION FORM */
+  .form-img-txt {
+    width: 40%;
+  }
+
+  /* SECTION CONTATO */
+  .contato-content{
+    gap: 10rem;
+  }
+
+  .contato-newsletter{
+    width: 50%;
+  }
+
+  .contato-form i {
+    left: 700%;
+  }
+}
