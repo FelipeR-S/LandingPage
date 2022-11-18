@@ -23,7 +23,9 @@ var app = builder.Build();
 var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
 
+#pragma warning disable CS8602 // Desreferência de uma referência possivelmente nula.
 services.GetService<IDataService>().InitDb().Wait();
+#pragma warning restore CS8602 // Desreferência de uma referência possivelmente nula.
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
