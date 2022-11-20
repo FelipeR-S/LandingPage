@@ -105,7 +105,7 @@ section {
   display: flex;
   flex-flow: column;
   justify-content: space-around;
-  align-items:initial;
+  align-items: initial;
   padding: 5%;
   width: 100%;
   height: 100%;
@@ -176,7 +176,7 @@ section {
   list-style: none;
   position: relative;
   height: 100%;
-  transition: transform .7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
 }
 
 .carousel-slide {
@@ -199,7 +199,7 @@ section {
   border: none;
   background: transparent;
   z-index: 1;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
   color: var(--cor-orange);
   font-size: 2em;
 }
@@ -224,17 +224,17 @@ section {
 
 .carousel-index {
   background: var(--cor-orange);
-  opacity: .3;
+  opacity: 0.3;
   border: 0;
   border-radius: 50%;
-  height: .7rem;
-  width: .7rem;
+  height: 0.7rem;
+  width: 0.7rem;
   margin: 0 1%;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .carousel-index:hover,
-.carousel-index.current-slide{
+.carousel-index.current-slide {
   opacity: 1;
 }
 
@@ -438,74 +438,74 @@ input:-webkit-autofill {
 /* FIM SECTION FORMULARIO */
 
 /* SECTION CONTATO */
-.contato-content{
+.contato-content {
   height: 100%;
   width: 100%;
   background: var(--cor-black);
   padding: 5%;
 }
 
-.contato-chamada{
+.contato-chamada {
   text-align: center;
   font-size: 2rem;
   font-weight: 400;
   margin-block: 15%;
 }
 
-.contato-chamada a{
+.contato-chamada a {
   font-size: 2rem;
   font-weight: 700;
   color: var(--cor-orange);
 }
 
-.contato-chamada a:hover{
+.contato-chamada a:hover {
   color: var(--cor-orange);
-  opacity: .7;
+  opacity: 0.7;
 }
 
-.contato-txt span{
+.contato-txt span {
   font-size: 2em;
   font-weight: 700;
 }
 
-.contato-txt p{
+.contato-txt p {
   margin-top: 5%;
 }
 
-.contato-icon-links{
+.contato-icon-links {
   display: flex;
   justify-content: space-around;
   margin-block: 5%;
 }
 
-.contato-icon-links i{
+.contato-icon-links i {
   color: var(--cor-orange);
   font-size: 1.5em;
   margin-right: 5%;
   transition: all 350ms ease-in-out;
 }
 
-.contato-icon-links i:hover{
+.contato-icon-links i:hover {
   font-size: 2em;
-  color: white;  
+  color: white;
   text-shadow: 0 0 10px var(--cor-orange);
 }
 
-.contato-enderecos{
+.contato-enderecos {
   margin-block: 10%;
 }
-.contato-local{
+.contato-local {
   margin-block: 10%;
 }
 
-.contato-local-cidade{
+.contato-local-cidade {
   text-align: left;
 }
-.contato-local p{
+.contato-local p {
   margin-bottom: 2%;
 }
 
-.contato-logo-bottom{
+.contato-logo-bottom {
   display: block;
   background-image: url(../img/landingpage/logo_white.png);
   background-size: contain;
@@ -516,50 +516,51 @@ input:-webkit-autofill {
   margin-bottom: 2%;
 }
 
-.contato-form{
+.contato-form {
   margin: 0;
   padding: 0;
   width: 100%;
   padding-block: 2%;
 }
-.contato-form label{
+.contato-form label {
   position: relative;
   font-size: 0.8rem;
   font-weight: 400;
 }
 
-.contato-form input, .contato-form button{
+.contato-form input,
+.contato-form button {
   margin: 0;
   padding: 0;
   height: 2rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
-.contato-form input{
+.contato-form input {
   padding-left: 2%;
   color: white;
   width: 69%;
-  border: .1rem solid var(--cor-orange);
+  border: 0.1rem solid var(--cor-orange);
   border-radius: 2rem 0 0 2rem;
   background: var(--cor-black);
 }
 
-.contato-form button{
+.contato-form button {
   color: white;
-  border: .1rem solid var(--cor-orange);
+  border: 0.1rem solid var(--cor-orange);
   background: var(--cor-orange);
   width: 29%;
   border-radius: 0 2rem 2rem 0;
   transition: all 320ms ease-in-out;
 }
 
-.contato-form button:hover{
+.contato-form button:hover {
   box-shadow: 0 0 15px var(--cor-orange);
 }
 
 .contato-form i {
   position: absolute;
-  top: calc(100% + .8rem);
+  top: calc(100% + 0.8rem);
   left: 300%;
 }
 
@@ -669,7 +670,7 @@ dialog::backdrop {
   .carousel {
     padding-bottom: 5%;
   }
-  .carousel-btn{
+  .carousel-btn {
     color: black;
   }
   /* FIM SECTION CAROUSEL */
@@ -684,35 +685,27 @@ dialog::backdrop {
   }
   /* FIM SECTION FORMULARIO */
   /* SECTION CONTATO */
-  .contato-chamada{
+  .contato-chamada {
     margin-block: 5%;
   }
-  .contato-txt{
-    width: 50%;
+  .contato-txt {
+    width: 80%;
     text-align: center;
     margin: 0 auto;
   }
 
-  .contato-icon-links{
-    margin-top: 5%;
-    width: 100%;
-    justify-content: flex-start;
-    gap: 5rem;
-  }
-
-  .contato-enderecos{
+  .contato-enderecos {
     display: flex;
     flex-flow: row nowrap;
-    gap:2rem;
+    gap: 2rem;
   }
-  .contato-local{
+  .contato-local {
     margin-block: 0;
   }
 
   .contato-form i {
     left: 650%;
   }
-
 }
 /* 1200px W */
 
@@ -814,46 +807,51 @@ dialog::backdrop {
   }
   /* FIM SECTION FORMULARIO */
 
-    /* SECTION CONTATO */
-    .contato-content{
-      display: flex;
-      flex-flow: row nowrap;
-      gap: 3rem;
-    }
+  /* SECTION CONTATO */
+  .contato-content {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 3rem;
+  }
 
-    .contato-chamada{
-      text-align: left;
-    }
+  .contato-chamada {
+    text-align: left;
+  }
 
-    .contato-links{
-      width: 50%;
-    }
+  .contato-links {
+    width: 50%;
+  }
 
-    .contato-txt{
-      width: 100%;
-      text-align: left;
-    }
+  .contato-icon-links {
+    justify-content: flex-start;
+    gap: 5rem;
+  }
 
-    .contato-newsletter{
-      display: flex;
-      flex-flow: column nowrap;
-      width: 100%;
-      padding-right: 0;
-      align-items: center;
-    }
+  .contato-txt {
+    width: 100%;
+    text-align: left;
+  }
 
-    .contato-enderecos{
-      margin-block: 5%;
-    }
-  
-    .contato-logo-bottom{
-      width: 100%;
-      margin: 0 auto;
-    }
+  .contato-newsletter {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    padding-right: 0;
+    align-items: center;
+  }
 
-    .contato-form i {
-      left: 400%;
-    }
+  .contato-enderecos {
+    margin-block: 5%;
+  }
+
+  .contato-logo-bottom {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contato-form i {
+    left: 400%;
+  }
 
   /* DIALOG */
   dialog {
@@ -863,7 +861,7 @@ dialog::backdrop {
 }
 
 @media (min-width: 1800px) {
-  /* SECTION CAROUSEL */  
+  /* SECTION CAROUSEL */
 
   .carousel-slide {
     width: 50%;
@@ -875,11 +873,11 @@ dialog::backdrop {
   }
 
   /* SECTION CONTATO */
-  .contato-content{
+  .contato-content {
     gap: 10rem;
   }
 
-  .contato-newsletter{
+  .contato-newsletter {
     width: 50%;
   }
 

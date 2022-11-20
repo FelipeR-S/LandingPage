@@ -2,6 +2,55 @@
     --cor-orange: #ff6c0a;
     --cor-purple: #322a85;
   }
+
+/* Animations */
+/* Animation for http error */
+@keyframes glitch {
+    0%{
+        text-shadow: 
+        0.05em 0 0 rgba(255, 0, 0, 0.4),
+        -0.05em -0.025em 0 rgba(0, 255, 0, 0.4),
+        -0.025em 0.05em 0 rgba(0, 0, 255, 0.4);
+    }
+    14%{
+        text-shadow: 
+        0.05em 0 0 rgba(255, 0, 0, 0.4),
+        -0.05em -0.025em 0 rgba(0, 255, 0, 0.4),
+        -0.025em 0.05em 0 rgba(0, 0, 255, 0.4);
+    }
+    15%{
+        text-shadow: 
+        -0.05em -0.025em 0 rgba(255, 0, 0, 0.4),
+        0.025em 0.025em 0 rgba(0, 255, 0, 0.4),
+        -0.05em -0.05em 0 rgba(0, 0, 255, 0.4);
+    }
+    49%{
+        text-shadow: 
+        -0.05em -0.025em 0 rgba(255, 0, 0, 0.4),
+        0.025em 0.025em 0 rgba(0, 255, 0, 0.4),
+        -0.05em -0.05em 0 rgba(0, 0, 255, 0.4);
+    }
+    50%{
+        text-shadow: 
+        0.025em 0.05em 0 rgba(255, 0, 0, 0.4),
+        0.05em 0 0 rgba(0, 255, 0, 0.4),
+        0 -0.05em 0 rgba(0, 0, 255, 0.4);
+    }
+    99%{
+        text-shadow: 
+        0.025em 0.05em 0 rgba(255, 0, 0, 0.4),
+        0.05em 0 0 rgba(0, 255, 0, 0.4),
+        0 -0.05em 0 rgba(0, 0, 255, 0.4);
+    }
+    100%{
+        text-shadow: 
+        -0.025em 0 0 rgba(255, 0, 0, 0.4),
+        -0.025em -0.025em 0 rgba(0, 255, 0, 0.4),
+        -0.025em -0.05em 0 rgba(0, 0, 255, 0.4);
+    }
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -31,3 +80,115 @@ h3 {
     text-align: center;
     font-weight: 700;
 }
+
+
+/* HTTP ERROR PAGE */
+.http-error{
+    display: grid;
+    place-items: center;
+    padding: 5%;
+    min-height: 100vh;
+}
+
+.error-content{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+/* Text */
+.number-error{
+    position: relative;
+    font-size: 8em;
+    font-weight: 900;
+    text-shadow: 
+        0.05em 0 0 rgba(255, 0, 0, 0.4),
+        -0.025em -0.05em 0 rgba(0, 255, 0, 0.4),
+        0.025em 0.05em 0 rgba(0, 0, 255, 0.4);
+        letter-spacing: .1em;
+
+    animation: glitch 500ms infinite;
+}
+
+.number-error span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .8;    
+}
+
+.number-error span:first-child{
+    animation: glitch 650ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 30%);
+    transform: translate(-0.025em, -0.0125em);
+}
+
+.number-error span:last-child{
+    animation: glitch 350ms infinite;
+    clip-path: polygon(0 70%, 100% 40%, 100% 100%, 0 100%);
+    transform: translate(0.0125em, 0.025em);
+}
+
+/* Button */
+.error-content a {
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    border-radius: 2rem;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+    margin-block: 4%;
+    font-weight: 700;
+    background: none;
+    text-shadow: 0 0 0.25rem rgba(255, 255, 255, 0.5);
+    color: white;
+    border: 0.3rem var(--cor-orange) solid;
+    box-shadow: 0 0 0.5rem var(--cor-orange);
+    transition: all 0.5s ease-in-out;
+  }
+  .error-content a:hover {
+    box-shadow: 0 0 1.5rem var(--cor-orange);
+  }
+  
+  .error-content a::after {
+    content: "";
+    border-radius: 2rem;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: var(--cor-orange);
+    transition: transform 0.8s;
+    transform-origin: 1 1;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+    z-index: -1;
+  }
+  
+  .error-content a:hover::after {
+    transform: scaleX(1);
+  }
+
+
+  /* KILL ANIMATIONS */
+
+  @media (min-width: 1800px){
+    .number-error{
+        font-size: 15em;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *,
+    ::after,
+    ::before{
+        animation-delay: -1mx !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: initial !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0s !important;
+        transition-delay: 0s !important;
+    }
+  }
