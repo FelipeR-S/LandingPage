@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q9+Gt3fFwdwDhmKrs5Q2d5wY/rdoaRfCEzSPHZliYgE=",
+  "Hash": "8Y5cth2KFg8R29qCckY/oxtdqk7sDE4s6hgBAdmevIg=",
   "Source": "LandingPage",
   "BasePath": "_content/LandingPage",
   "Mode": "Default",
@@ -1122,12 +1122,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\blue-sky.png",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\blue-sky.webp",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/blue-sky.png",
+      "RelativePath": "img/landingpage/blue-sky.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1136,7 +1136,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\blue-sky.png"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\blue-sky.webp"
     },
     {
       "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\building1.png",
@@ -1154,6 +1154,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\landingpage\\building1.png"
+    },
+    {
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\building1.webp",
+      "SourceId": "LandingPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
+      "BasePath": "_content/LandingPage",
+      "RelativePath": "img/landingpage/building1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\building1.webp"
     },
     {
       "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\calendario-ico.svg",
@@ -1190,12 +1207,12 @@
       "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\arrow.svg"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior1.jpg",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior1.webp",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/carousel/interior1.jpg",
+      "RelativePath": "img/landingpage/carousel/interior1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1204,15 +1221,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior1.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior1.webp"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior10.jpg",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior10.webp",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/carousel/interior10.jpg",
+      "RelativePath": "img/landingpage/carousel/interior10.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1221,15 +1238,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior10.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior10.webp"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior2.jpg",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior2.webp",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/carousel/interior2.jpg",
+      "RelativePath": "img/landingpage/carousel/interior2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1238,15 +1255,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior2.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior2.webp"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior3.jpg",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior3.webp",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/carousel/interior3.jpg",
+      "RelativePath": "img/landingpage/carousel/interior3.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1255,15 +1272,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior3.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior3.webp"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior4.jpg",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior4.webp",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/carousel/interior4.jpg",
+      "RelativePath": "img/landingpage/carousel/interior4.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1272,15 +1289,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior4.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior4.webp"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior5.jpg",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior5.webp",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/carousel/interior5.jpg",
+      "RelativePath": "img/landingpage/carousel/interior5.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1289,15 +1306,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior5.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior5.webp"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior6.jpg",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior6.webp",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/carousel/interior6.jpg",
+      "RelativePath": "img/landingpage/carousel/interior6.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1306,15 +1323,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior6.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior6.webp"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior7.jpg",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior7.webp",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/carousel/interior7.jpg",
+      "RelativePath": "img/landingpage/carousel/interior7.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1323,15 +1340,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior7.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior7.webp"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior8.jpg",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior8.webp",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/carousel/interior8.jpg",
+      "RelativePath": "img/landingpage/carousel/interior8.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1340,15 +1357,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior8.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior8.webp"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior9.jpg",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\carousel\\interior9.webp",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/carousel/interior9.jpg",
+      "RelativePath": "img/landingpage/carousel/interior9.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1357,15 +1374,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior9.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\carousel\\interior9.webp"
     },
     {
-      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\happy-couple.png",
+      "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\happy-couple.webp",
       "SourceId": "LandingPage",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\",
       "BasePath": "_content/LandingPage",
-      "RelativePath": "img/landingpage/happy-couple.png",
+      "RelativePath": "img/landingpage/happy-couple.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1374,7 +1391,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\landingpage\\happy-couple.png"
+      "OriginalItemSpec": "wwwroot\\img\\landingpage\\happy-couple.webp"
     },
     {
       "Identity": "E:\\Documentos\\FELIPE\\Programação\\Projetos\\LandingPageMaster\\LandingPage\\wwwroot\\img\\landingpage\\logo_black.png",

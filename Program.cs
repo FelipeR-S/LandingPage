@@ -28,12 +28,12 @@ builder.Services.AddTransient<INewsLetterRepository, NewsLetterRepository>();
 var app = builder.Build();
 
 // Gera scope para inicialização do banco de dados
-//var scope = app.Services.CreateScope();
-//var services = scope.ServiceProvider;
+var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
 
 #pragma warning disable CS8602 // Desreferência de uma referência possivelmente nula.
 // Inicializa o banco de dados
-//services.GetService<IDataService>().InitDb().Wait();
+services.GetService<IDataService>().InitDb().Wait();
 #pragma warning restore CS8602 // Desreferência de uma referência possivelmente nula.
 
 // Configure the HTTP request pipeline.
