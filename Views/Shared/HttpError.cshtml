@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "LandingPageError";
+}
+@{
+    var mensagem = ViewData["MessageError"];
+    var codigo = ViewData["codeError"];
+}
+
+<div class="http-error">
+    <div class="error-content">
+        <p class="number-error"><span aria-hidden="true">@codigo</span>@codigo<span aria-hidden="true">@codigo</span></p>
+        <p class="text">@mensagem</p>
+        <a href="@Url.Action("LandingPage")" >Voltar a landingPage</a>
+    </div>
+</div>

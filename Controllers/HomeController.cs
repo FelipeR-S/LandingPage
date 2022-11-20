@@ -33,14 +33,22 @@ namespace LandingPage.Controllers
             return View();
         }
 
-        public IActionResult Index()
+        /// <summary>
+        /// Trata erros comuns do HTTP
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        [Route("/Home/HandleError/{code:int}")]
+        public IActionResult HandleError(int code)
         {
-            return View();
-        }
+            var mensagem = "";
+            if (code == 404) mensagem = "Oops. A página que está procurando não existe ou não está disponível!";
+            else if (code == 500) mensagem = "Oops. Ocorreram problemas com o servidor! Entre em contato com um administrador para resolver o problema.";
+            else mensagem = "Oops. Um erro inesperado ocorreu! Entre em contato com um administrador para resolver o problema.";
 
-        public IActionResult Privacy()
-        {
-            return View();
+            ViewData["CodeError"] = code;
+            ViewData["MessageError"] = mensagem;
+            return View("~/Views/Shared/HttpError.cshtml");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
