@@ -1,0 +1,4 @@
+/bin/Release/net6.0/*
+!/bin/Release/net6.0/publish/
+/obj/*
+/bin/Debug/net6.0/*
